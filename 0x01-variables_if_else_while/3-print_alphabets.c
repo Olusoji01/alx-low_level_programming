@@ -3,6 +3,7 @@
  * main - a program that prints the alphabet in lowercase,
  * and then in uppercase, followed by a new line
  * void: no argument is passed
+ * Return: it returns 0 after execution
  */
 int main(void)
 {
