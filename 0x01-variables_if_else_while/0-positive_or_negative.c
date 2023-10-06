@@ -1,9 +1,12 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - A program that assign a random
+ * number to the variable each time it is executed
+ * void: No value is passed as an argument
+ * Return: it return 0 after execution
+ */
 int main(void)
 {
 	int n;
