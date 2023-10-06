@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - a program that prints the alphabet 
+ * main - a program that prints the alphabet
  * in lowercase followed by a new line
  * void: nothing is passed as an argument
  * Return: it return zero after execution
