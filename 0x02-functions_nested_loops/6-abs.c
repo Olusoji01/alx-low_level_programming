@@ -6,6 +6,6 @@
  * Return: it return 0 after execution
  */
 int _abs(int i)
-{ 
+{
 	return (abs(i));
 }
