@@ -12,7 +12,8 @@ int main(void)
 	 * the number to find its factor, div means division,
 	 * ans is answer, and maxFact represents largest factor
 	 */
-	long int n, div, ans, maxFact;
+	long int n;
+	int div, ans, maxFact;
 
 	n = 612852475143, div = 2, ans = 0;
 	while (n != 0)
@@ -27,7 +28,7 @@ int main(void)
 			n = n / div;
 			if (n == 1)
 			{
-				printf("%ld is the largest prime factor!", maxFact);
+				printf("%d\n", maxFact);
 				ans = ans + 1;
 				break;
 			}
