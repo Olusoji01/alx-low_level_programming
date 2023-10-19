@@ -9,17 +9,16 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i;
+	/**
+	 * Declaring variables i for iteration and
+	 * temp to hold variable temporarily
+	 */
+	int i, temp;
 
-	for (i = n - 1; i >= 0; i--)
+	for (i = 0; i < n / 2; i++)
 	{
-		if (i == 0)
-		{
-			printf("%d\n", a[i]);
-		}
-		else
-		{
-			printf("%d, ", a[i]);
-		}
+		temp = a[i];
+		a[i] = a[n - i - 1];
+		a[n - i - 1] = temp;
 	}
 }
