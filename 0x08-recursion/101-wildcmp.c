@@ -13,9 +13,20 @@ int strcmp(const char *s1, const char *s2)
 	{
 		return (true);
 	}
-	if (*s1 == *s2 || *s2 == '*')
+	if (*s1 == *s2)
 	{
-		return ((strcmp(s1 + 1, s2 + 1)) || (strcmp(s1, s2 + 1)));
+		return (strcmp(s1 + 1, s2 + 1));
+	}
+	if (*s2 == '*')
+	{
+		if(*(s2 + 1) == '*')
+		{
+			return (strcmp(s1, s2 + 1));
+		}
+		if (strcmp(s1 + 1, s2) || strcmp(s1, s2 + 1))
+		{
+			return (true);
+		}
 	}
 	return (false);
 }
