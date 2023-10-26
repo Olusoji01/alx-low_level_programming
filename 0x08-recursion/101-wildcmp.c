@@ -19,7 +19,7 @@ int strcmp(const char *s1, const char *s2)
 	}
 	if (*s2 == '*')
 	{
-		if(*(s2 + 1) == '*')
+		if (*(s2 + 1) == '*')
 		{
 			return (strcmp(s1, s2 + 1));
 		}
