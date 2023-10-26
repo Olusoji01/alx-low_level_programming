@@ -13,5 +13,7 @@ int is_prime_helper(int n, int i);
 int is_prime_number(int n);
 int is_palindrome_recursive(char *s, int i, int j);
 int is_palindrome(char *s);
+int strcmp(const char *s1, const char *s2);
+int wildcmp(char *s1, char *s2);
 
 #endif

@@ -1,5 +1,5 @@
 #include "main.h"
-#include <string.h>
+#include <stdbool.h>
 /**
  * strcmp - a function that compares two strings and
  * @s1: first string
@@ -7,7 +7,7 @@
  * Return: it returns true if the strings can be
  * considered identical, otherwise return false
  */
-int strcmp(const char *s1, const char *s2);
+int strcmp(const char *s1, const char *s2)
 {
 	if (*s1 == '\0' && *s2 == '\0')
 	{
@@ -15,7 +15,7 @@ int strcmp(const char *s1, const char *s2);
 	}
 	if (*s1 == *s2 || *s2 == '*')
 	{
-		return ((strcmp(s1 + 1, s2 + 1)) || (strcpm(s1, s2 + 1)));
+		return ((strcmp(s1 + 1, s2 + 1)) || (strcmp(s1, s2 + 1)));
 	}
 	return (false);
 }
