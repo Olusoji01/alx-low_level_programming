@@ -11,21 +11,21 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-       char *concat;
+	char *concat;
 
 	if (s1 == NULL && s2 == NULL)
 	{
 		return (NULL);
 	}
-	concat = (char *)malloc(strlen(s1) + strlen(s2) + 1);
+	concat = (char *)malloc(sizeof(char) * strlen(s1) + strlen(s2) + 1);
 	if (concat == NULL)
 	{
 		return (NULL);
 	}
 	if (concat)
 	{
-		memcpy (concat, s1, strlen(s1));
-		memcpy (concat + strlen(s1), s2, strlen(s2) + 1);
+		memcpy(concat, s1, strlen(s1));
+		memcpy(concat + strlen(s1), s2, strlen(s2) + 1);
 	}
 	return (concat);
 }
