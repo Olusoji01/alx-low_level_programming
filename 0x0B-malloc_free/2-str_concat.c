@@ -18,7 +18,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 	concat = (char *)malloc(strlen(s1) + strlen(s2) + 1);
-	if (!concat)
+	if (concat == NULL)
 	{
 		return (NULL);
 	}
