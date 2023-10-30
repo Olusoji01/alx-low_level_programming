@@ -22,6 +22,7 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	return (strdup(str));
+	strcpy (duplicate, str);
+	return (duplicate);
 
 }
