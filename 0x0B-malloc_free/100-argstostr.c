@@ -18,7 +18,6 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-	
 	total_length = 0;
 	for (i = 0; i < ac; i++)
 	{
@@ -41,5 +40,5 @@ char *argstostr(int ac, char **av)
 	/* Add a null-terminator at the end */
 	concatenated[total_length] = '\0';
 
-	return concatenated;
+	return (concatenated);
 }
