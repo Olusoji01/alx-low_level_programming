@@ -30,7 +30,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		if (n >= strlen(s2))
 		{
-			memcpy(concatenated, s2, strlen(s2));
+			memcpy(concatenated, s2, strlen(s2) + 1);
 		}
 		memcpy(concatenated, s1, strlen(s1));
 		memcpy(concatenated + strlen(s1), s2, n + 1);
