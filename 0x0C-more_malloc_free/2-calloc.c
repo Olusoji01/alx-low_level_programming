@@ -11,15 +11,18 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
+	size_t totalsize;
 
-	ptr = calloc(nmemb, size);
+	totalsize = (size_t)nmemb * size;
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
+	ptr = malloc(totalsize);
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
+	memset(ptr, 0, totalsize);
 	return (ptr);
 }
