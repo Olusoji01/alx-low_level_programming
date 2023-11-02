@@ -21,19 +21,20 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-	concatenated = (char *)malloc(sizeof(char) * strlen(s1) + strlen(s2) + 1);
+	if (n >= strlen(s2))
+	{
+		n = strlen(s2);
+	}
+	concatenated = (char *)malloc(sizeof(char) * strlen(s1) + n + 1);
 	if (concatenated == NULL)
 	{
 		return (NULL);
 	}
 	if (concatenated)
 	{
-		if (n >= strlen(s2))
-		{
-			memcpy(concatenated, s2, strlen(s2) + 1);
-		}
 		memcpy(concatenated, s1, strlen(s1));
-		memcpy(concatenated + strlen(s1), s2, n + 1);
+		memcpy(concatenated + strlen(s1), s2, n);
 	}
+	concatenated[strlen(s1) + n] = '\0';
 	return (concatenated);
 }
