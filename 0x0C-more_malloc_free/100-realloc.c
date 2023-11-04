@@ -6,6 +6,7 @@
  * block using malloc and free
  * @old_size: old size of the memory allocated
  * @new_size: new size of the memory allocated
+ * @ptr: pointer to to perform memory allocation
  * Return: it returns 0 at success, if ptr is NUll,
  * then the call is equiv. to new_size
  */
@@ -27,12 +28,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		return (NULL);
 	}
 	newptr = malloc(new_size);
+	if (newptr == NULL)
+	{
+		return (NULL);
+	}
 	if (new_size > old_size)
 	{
-		if (newptr == NULL)
-		{
-			return (NULL);
-		}
 		memcpy(newptr, ptr, old_size);
 	}
 	free(ptr);
