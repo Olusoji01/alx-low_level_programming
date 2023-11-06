@@ -6,7 +6,7 @@
  * @name: name of new dog
  * @age: age of new dog
  * @owner: Owner of new dog
- * Rettun: it returns NULL if the functions fail
+ * Return: it returns NULL if the functions fail
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -18,9 +18,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	new_dog->name = strdup(name);
-	new_dog->age = age;
 	new_dog->owner = strdup(owner);
-
+	if (new_dog->owner == NULL || new_dog->name == NULL)
+	{
+		free(new_dog->name);
+		free(new_dog->owner);
+		free(new_dog);
+		return (NULL);
+	}
+	new_dog->age = age;
 
 	return (new_dog);
 }
